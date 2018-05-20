@@ -8,7 +8,7 @@ const Home = () => {
     <center>
       <br/>
       <h1>Pivot</h1>
-      <p>Helping people find their dream job long-term.</p>
+      <p>Helping people find their dream job, long-term.</p>
       <img src={image} width="400px"/>
     </center>
     </div>
