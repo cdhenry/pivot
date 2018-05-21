@@ -19,7 +19,7 @@ const NavBar = () => {
             <a class="nav-link" href="#">Compare Careers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">All Careers</a>
+            <a class="nav-link" href="/careers">All Careers</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>

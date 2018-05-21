@@ -5,7 +5,8 @@ class Career < ActiveRecord::Base
   end
 
   def self.all
-    resp = Faraday.get 'https://services.onetcenter.org/ws/mnm/careers/'
+    resp = Faraday.get `https://services.onetcenter.org/ws/mnm/careers`
     body_hash = JSON.parse(resp.body)
+    binding.pry
   end
 end

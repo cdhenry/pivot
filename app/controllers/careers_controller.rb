@@ -1,9 +1,10 @@
 class CareersController < ApplicationController
-  def index
+  def all_careers
+    binding.pry
     render json: Career.all
   end
 
-  def new
+  def index
     career_title = params[:career_title]
 
     results = Career.search(career_title)

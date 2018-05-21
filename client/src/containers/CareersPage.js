@@ -26,7 +26,7 @@ class CareersPage extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return {careers: state.careers}
+  return {careers: state.careers.careers}
 }
 
 export default connect(mapStateToProps, {fetchCareers})(CareersPage);
