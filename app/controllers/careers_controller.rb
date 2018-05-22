@@ -8,6 +8,7 @@ class CareersController < ApplicationController
   end
 
   def index
+    binding.pry
     render json: Career.allData
   end
 end
