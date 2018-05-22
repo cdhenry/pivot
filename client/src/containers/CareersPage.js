@@ -16,10 +16,14 @@ class CareersPage extends Component {
     const careers = this.props.careers
 
     return (
-      <div className="careersContainer" align="center">
-      <br />
-      <h3><strong>All Careers: </strong></h3><br/>
-      <CareerList careers={careers} />
+      <div className="container" align="center">
+        <br />
+        <div className="jumbotron">
+          <h1 className="display-3">Careers</h1>
+        </div>
+
+        <br />
+        <CareerList careers={careers}/>
       </div>
     );
   }

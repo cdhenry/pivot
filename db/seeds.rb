@@ -41,7 +41,7 @@ while job_prep_index < 6 do
   career_hash["career"].each do |career|
     job_zone.careers.build(
       title: career["title"],
-      code: career["code"],
+      #code: career["code"],
       href: career["href"],
       bright_outlook: career["tags"]["bright_outlook"],
       green: career["tags"]["green"],
