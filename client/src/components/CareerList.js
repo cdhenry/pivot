@@ -2,7 +2,7 @@ import React from 'react';
 
 function CareerList(props) {
   const careers = props.careers.map((career) =>
-    <div key={career.id}>
+    <div>
       <h3>{career.title}</h3>
     </div>
   );

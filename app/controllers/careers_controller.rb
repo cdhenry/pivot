@@ -1,14 +1,13 @@
 class CareersController < ApplicationController
-  def all_careers
-    binding.pry
-    render json: Career.all
-  end
-
-  def index
+  def search
     career_title = params[:career_title]
 
     results = Career.search(career_title)
 
     render :json => results
+  end
+
+  def index
+    render json: Career.allData
   end
 end
