@@ -8,8 +8,8 @@ class CareersPage extends Component {
 
   componentDidMount(){
     if(this.props.careers.length === 0) {
-     this.props.fetchCareers()
-   }
+      this.props.fetchCareers()
+    }
   }
 
   render() {
