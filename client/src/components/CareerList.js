@@ -1,19 +1,17 @@
 import React from 'react';
-
+import './CareerList.css';
 
 function CareerList(props) {
   const careers = props.careers.map((career) =>
-    <div className="col-lg-4">
-      <div className="card bg-light mb-3">
-        <div className="card-header">{career.title}</div>
-        <div className="card-body">
-        </div>
+    <div className="card border-primary mb-3 col-md-auto CareerStyle">
+      <div className="card-body">
+        <p className="card-text">{career.title}</p>
       </div>
     </div>
   );
 
   return(
-    <div className="row">
+    <div className="row justify-content-md-center">
       {careers}
     </div>
   )
