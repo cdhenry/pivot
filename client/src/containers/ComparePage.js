@@ -87,70 +87,87 @@ class ComparePage extends React.Component {
                 </td>
                 <td>
                   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                  <input type="range" min="1" max="5"/></td>
+                  <input type="range" min="1" max="5"/>
+                </td>
                 <td>
                   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                  <input type="range" min="1" max="5"/></td>
+                  <input type="range" min="1" max="5"/>
+                </td>
               </tr>
               <tr className="table-light">
                 <th scope="row">Work that helps others</th>
                 <td>
                   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                  <input type="range" min="1" max="5"/></td>
+                  <input type="range" min="1" max="5"/>
+                  </td>
                 <td>
                   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                  <input type="range" min="1" max="5"/></td>
+                  <input type="range" min="1" max="5"/>
+                  </td>
                 <td>
                   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                  <input type="range" min="1" max="5"/></td>
+                  <input type="range" min="1" max="5"/>
+                  </td>
               </tr>
               <tr className="table-primary">
                 <th scope="row">Being good at your job</th>
                 <td>
                   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                  <input type="range" min="1" max="5"/></td>
+                  <input type="range" min="1" max="5"/>
+                </td>
                 <td>
                   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                  <input type="range" min="1" max="5"/></td>
+                  <input type="range" min="1" max="5"/>
+                </td>
                 <td>
                   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                  <input type="range" min="1" max="5"/></td>
+                  <input type="range" min="1" max="5"/>
+                </td>
               </tr>
               <tr className="table-light">
                 <th scope="row">Supportive colleagues</th>
                 <td>
                   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                  <input type="range" min="1" max="5"/></td>
+                  <input type="range" min="1" max="5"/>
+                </td>
                 <td>
                   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                  <input type="range" min="1" max="5"/></td>
+                  <input type="range" min="1" max="5"/>
+                </td>
                 <td>
                   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                  <input type="range" min="1" max="5"/></td>
+                  <input type="range" min="1" max="5"/>
+                </td>
               </tr>
               <tr className="table-primary">
                 <th scope="row">Basic needs</th>
                 <td>
                   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                  <input type="range" min="1" max="5"/></td>
+                  <input type="range" min="1" max="5"/>
+                </td>
                 <td>
                   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                  <input type="range" min="1" max="5"/></td>
+                  <input type="range" min="1" max="5"/>
+                </td>
                 <td>
                   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                  <input type="range" min="1" max="5"/></td>
+                  <input type="range" min="1" max="5"/>
+                </td>
               </tr>
               <tr className="table-light">
                 <th scope="row">Fit with rest of life</th>
                 <td>
                   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                  <input type="range" min="1" max="5"/></td>
+                  <input type="range" min="1" max="5"/>
+                </td>
                 <td>
                   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                  <input type="range" min="1" max="5"/></td>
+                  <input type="range" min="1" max="5"/>
+                </td>
                 <td>
                   1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                  <input type="range" min="1" max="5"/></td>
+                  <input type="range" min="1" max="5"/>
+                </td>
               </tr>
             </tbody>
           </table>
