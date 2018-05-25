@@ -2,7 +2,7 @@ class CareersController < ApplicationController
   def index
     render json: Career.all
   end
-  
+
   def search
     # career_title = params[:career_title]
     #
