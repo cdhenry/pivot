@@ -1,7 +1,8 @@
 import React from 'react';
 import { fetchCareers } from '../actions/careers';
-import Select from 'react-select';
-import 'react-select/dist/react-select.css';
+// import Select from 'react-select';
+// import 'react-select/dist/react-select.css';
+import Select from 'react-styled-select'
 
 class ComparePage extends React.Component {
 
@@ -25,7 +26,7 @@ class ComparePage extends React.Component {
   }
 
   render(){
-    const options = this.state.careers.map((career) => career.title)
+    const options = this.state.careers.map((career, index) => { return {label: career.title, value: index}})
     return(
       <div className="container">
       <br/>
@@ -40,16 +41,42 @@ class ComparePage extends React.Component {
             <thead>
               <tr>
                 <th scope="col">Predictor</th>
-                <th scope="col">
+                <th scope="col"><div style={{width:'175px'}}>
                   <Select
-                      name="university"
-                      value="one"
-                      options={options}
-                      onChange={val => console.log(val)}
-                  />
+                    options={options}
+                    searchable={true}
+                    clearable={true}
+                    placeholder={"Job 1"}
+                    classes={{
+                      selectValue: 'my-custom-value',
+                      selectArrow: 'my-custom-arrow'
+                    }}
+                  /></div>
                 </th>
-                <th scope="col"><input type="select" placeholder="Job 2"/></th>
-                <th scope="col"><input type="select" placeholder="Job 3"/></th>
+                <th scope="col"><div style={{width:'175px'}}>
+                  <Select
+                    options={options}
+                    searchable={true}
+                    clearable={true}
+                    placeholder={"Job 2"}
+                    classes={{
+                      selectValue: 'my-custom-value',
+                      selectArrow: 'my-custom-arrow'
+                    }}
+                  /></div>
+                </th>
+                <th scope="col"><div style={{width:'175px'}}>
+                  <Select
+                    options={options}
+                    searchable={true}
+                    clearable={true}
+                    placeholder={"Job 3"}
+                    classes={{
+                      selectValue: 'my-custom-value',
+                      selectArrow: 'my-custom-arrow'
+                    }}
+                  /></div>
+                </th>
               </tr>
             </thead>
             <tbody>
