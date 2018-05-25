@@ -1,5 +1,6 @@
 class Career < ActiveRecord::Base
   belongs_to :job_zone
+  has_many :predictors
   # def self.search(career_title)
   #   conn = Faraday.new 'https://services.onetcenter.org'
   #   conn.basic_auth(ENV['ONET_USERNAME'], ENV['ONET_PASSWORD'])
