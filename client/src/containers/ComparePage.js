@@ -1,7 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { fetchCareers } from '../actions/careers';
-// import Select from 'react-select';
-// import 'react-select/dist/react-select.css';
 import Select from 'react-styled-select'
 
 class ComparePage extends React.Component {
@@ -9,24 +8,24 @@ class ComparePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      engagement: '',
-      altruism: '',
-      skill: '',
-      support: '',
-      basic_needs: '',
-      balance: '',
+      engagement: [],
+      altruism: [],
+      skill: [],
+      support: [],
+      basic_needs: [],
+      balance: [],
       careers: []
     };
   }
 
   componentDidMount(){
-    fetch('/api/careers')
-      .then((response) => response.json())
-      .then((responseJSON) => this.setState({careers: responseJSON}))
+    if(this.props.careers.length === 0) {
+      this.props.fetchCareers()
+    }
   }
 
   render(){
-    const options = this.state.careers.map((career, index) => { return {label: career.title, value: index}})
+    const options = this.props.careers.map((career, index) => { return {label: career.title, value: index}})
     return(
       <div className="container">
       <br/>
@@ -165,4 +164,8 @@ class ComparePage extends React.Component {
   }
 }
 
-export default ComparePage;
+const mapStateToProps = (state) => {
+  return {careers: state.careers.careers}
+}
+
+export default connect(mapStateToProps, {fetchCareers})(ComparePage);

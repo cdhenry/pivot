@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchCareers } from '../actions/careers';
-import CareerList from '../components/CareerList';
+import { fetchJobZones } from '../actions/jobZones';
+import JobZoneList from '../components/JobZoneList';
 import { bindActionCreators } from 'redux'
 
 class CareersPage extends Component {
 
   componentDidMount(){
-    if(this.props.careers.length === 0) {
-      this.props.fetchCareers()
+    if(this.props.jobZones.length === 0) {
+      this.props.fetchJobZones()
     }
   }
 
   render() {
-    const careers = this.props.careers
-
+    const jobZones = this.props.jobZones
     return (
       <div className="container" align="center">
         <br />
@@ -23,14 +22,14 @@ class CareersPage extends Component {
         </div>
 
         <br />
-        <CareerList careers={careers}/>
+        <JobZoneList jobZones={jobZones}/>
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  return {careers: state.careers.careers}
+  return {jobZones: state.jobZones.jobZones}
 }
 
-export default connect(mapStateToProps, {fetchCareers})(CareersPage);
+export default connect(mapStateToProps, {fetchJobZones})(CareersPage);
