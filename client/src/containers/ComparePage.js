@@ -12,7 +12,7 @@ class ComparePage extends React.Component {
       altruism: [],
       skill: [],
       support: [],
-      basic_needs: [],
+      basicNeeds: [],
       balance: [],
       careers: []
     };

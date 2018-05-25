@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_22_145714) do
+ActiveRecord::Schema.define(version: 2018_05_25_214502) do
 
   create_table "careers", force: :cascade do |t|
     t.integer "job_zone_id"
@@ -22,11 +22,27 @@ ActiveRecord::Schema.define(version: 2018_05_22_145714) do
     t.index ["job_zone_id"], name: "index_careers_on_job_zone_id"
   end
 
+  create_table "comparisons", force: :cascade do |t|
+  end
+
   create_table "job_zones", force: :cascade do |t|
     t.string "title"
     t.string "experience"
     t.string "education"
     t.string "job_training"
+  end
+
+  create_table "predictors", force: :cascade do |t|
+    t.integer "career_id"
+    t.integer "comparison_id"
+    t.integer "engagement"
+    t.integer "altruism"
+    t.integer "skill"
+    t.integer "support"
+    t.integer "basic_needs"
+    t.integer "balance"
+    t.index ["career_id"], name: "index_predictors_on_career_id"
+    t.index ["comparison_id"], name: "index_predictors_on_comparison_id"
   end
 
 end
