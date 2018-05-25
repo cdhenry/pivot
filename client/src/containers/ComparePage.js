@@ -1,6 +1,7 @@
 import React from 'react';
 import { fetchCareers } from '../actions/careers';
 import Select from 'react-select';
+import 'react-select/dist/react-select.css';
 
 class ComparePage extends React.Component {
 
@@ -24,7 +25,7 @@ class ComparePage extends React.Component {
   }
 
   render(){
-    const options = this.state.careers
+    const options = this.state.careers.map((career) => career.title)
     return(
       <div className="container">
       <br/>
@@ -39,7 +40,14 @@ class ComparePage extends React.Component {
             <thead>
               <tr>
                 <th scope="col">Predictor</th>
-                <th scope="col"><input type="select" placeholder="Job 1"/></th>
+                <th scope="col">
+                  <Select
+                      name="university"
+                      value="one"
+                      options={options}
+                      onChange={val => console.log(val)}
+                  />
+                </th>
                 <th scope="col"><input type="select" placeholder="Job 2"/></th>
                 <th scope="col"><input type="select" placeholder="Job 3"/></th>
               </tr>
