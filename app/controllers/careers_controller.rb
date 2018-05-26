@@ -4,10 +4,14 @@ class CareersController < ApplicationController
   end
 
   def search
-    # career_title = params[:career_title]
-    #
-    # results = Career.search(career_title)
-    #
-    # render :json => results
+    career = Career.find(params[:id])
+    if career["aka"] == nil
+      results = Career.search(career.href)
+      career.update(results)
+      career.save
+      render :json => career
+    else
+      render :json => career
+    end
   end
 end
