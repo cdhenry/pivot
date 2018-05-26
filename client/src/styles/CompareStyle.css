@@ -1,0 +1,20 @@
+.TableStyle {
+  margin-bottom: 1rem;
+}
+
+.TableStyle th,
+.TableStyle td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #eceeef;
+  padding-right: 2rem;
+}
+
+.TableStyle tbody + tbody {
+  border-top: 2px solid #eceeef;
+}
+
+.PredictorSelectStyle {
+  width: 150px;
+  margin: 6px 0px 6px 0px;
+}
