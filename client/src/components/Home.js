@@ -8,7 +8,7 @@ const Home = () => {
         <br/>
         <h1>Pivot</h1>
         <p>Helping people find their dream job, long-term.</p>
-        <img src={image} width="400px"/>
+        <img src={image} width="400px" alt="pivotHomeImage"/>
         <br/><br/>
         <small><p>
           *This site incorporates information from<br/>

@@ -3,19 +3,19 @@ import CareerList from './CareerList';
 import JobZoneHeader from './JobZoneHeader';
 import './CareerStyle.css';
 
-function JobZoneList(props) {
-  const jobZones = props.jobZones.map((jobZone, index) =>
-    <div className="card mb-3" id={index+1}>
+const JobZoneList = ({jobZones}) => {
+  const renderJobZones = jobZones.map((jobZone, index) =>
+    <div key={index+1} id={index+1} className="card mb-3">
       <JobZoneHeader header={jobZone.title} length={jobZone.careers.length}/>
 
       <div className="card text-white bg-info mb-3 ZoneInfo">
         <div className="card-body">
           <ul>
-            <h6>Experience:</h6>
+            <h6><b>Experience:</b></h6>
             <li><h6>{jobZone.experience}</h6></li>
-            <h6>Education:</h6>
+            <h6><b>Education:</b></h6>
             <li><h6>{jobZone.education}</h6></li>
-            <h6>Training:</h6>
+            <h6><b>Training:</b></h6>
             <li><h6>{jobZone.job_training}</h6></li>
           </ul>
         </div>
@@ -35,7 +35,7 @@ function JobZoneList(props) {
 
   return(
     <div className="row">
-      {jobZones}
+      {renderJobZones}
     </div>
   )
 }

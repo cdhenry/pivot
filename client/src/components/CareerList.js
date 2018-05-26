@@ -2,14 +2,14 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './CareerStyle.css';
 
-function CareerList(props) {
-  const careers = props.careers.map((career) =>
-    <a href="#" className="btn btn-outline-primary btn-lg" style={{margin:'5px'}}>{career.title}</a>
+const CareerList = ({careers}) => {
+  const renderCareers = careers.map((career) =>
+    <Link key={career.id} to={`/careers/${career.id}`} className="btn btn-outline-primary btn-lg" style={{margin:'5px'}}>{career.title}</Link>
   );
 
   return(
     <div className="row justify-content-md-center">
-      {careers}
+      {renderCareers}
     </div>
   )
 }
