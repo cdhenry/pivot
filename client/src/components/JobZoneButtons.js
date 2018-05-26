@@ -1,5 +1,5 @@
 import React from 'react';
-import './CareerStyle.css';
+import '../styles/CareerStyle.css';
 
 const JobZoneButtons = () => {
   return(

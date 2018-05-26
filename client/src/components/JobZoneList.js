@@ -1,7 +1,7 @@
 import React from 'react';
 import CareerList from './CareerList';
 import JobZoneHeader from './JobZoneHeader';
-import './CareerStyle.css';
+import '../styles/CareerStyle.css';
 
 const JobZoneList = ({jobZones}) => {
   const renderJobZones = jobZones.map((jobZone, index) =>

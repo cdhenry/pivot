@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import './CareerStyle.css';
+import '../styles/CareerStyle.css';
 
 const CareerList = ({careers}) => {
   const renderCareers = careers.map((career) =>
