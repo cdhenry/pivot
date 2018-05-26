@@ -1,0 +1,13 @@
+.CareerStyle {
+  margin: 5px;
+  max-width: 20rem;
+}
+
+.ZoneInfo {
+  max-width: 40rem;
+  text-align: left;
+}
+
+.ZoneButton {
+  margin: 5px;
+}
