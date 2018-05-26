@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_25_214502) do
+ActiveRecord::Schema.define(version: 2018_05_26_180406) do
 
   create_table "careers", force: :cascade do |t|
     t.integer "job_zone_id"
@@ -19,6 +19,9 @@ ActiveRecord::Schema.define(version: 2018_05_25_214502) do
     t.boolean "bright_outlook"
     t.boolean "green"
     t.boolean "apprenticeship"
+    t.string "aka"
+    t.string "what_they_do"
+    t.string "on_the_job"
     t.index ["job_zone_id"], name: "index_careers_on_job_zone_id"
   end
 
