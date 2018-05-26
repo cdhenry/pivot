@@ -1,13 +1,10 @@
 import React from 'react';
-import './CareerList.css';
+import {Link} from 'react-router-dom';
+import './CareerStyle.css';
 
 function CareerList(props) {
   const careers = props.careers.map((career) =>
-    <div className="card border-primary mb-3 col-md-auto CareerStyle">
-      <div className="card-body">
-        <p className="card-text">{career.title}</p>
-      </div>
-    </div>
+    <a href="#" className="btn btn-outline-primary btn-lg" style={{margin:'5px'}}>{career.title}</a>
   );
 
   return(

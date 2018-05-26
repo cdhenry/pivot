@@ -1,7 +1,6 @@
 import React from 'react';
 import image from '../pivot.png'
 
-
 const Home = () => {
   return (
     <div className="HomePage">

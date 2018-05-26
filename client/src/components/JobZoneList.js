@@ -1,31 +1,34 @@
 import React from 'react';
 import CareerList from './CareerList';
+import JobZoneHeader from './JobZoneHeader';
+import './CareerStyle.css';
 
 function JobZoneList(props) {
-  const jobZones = props.jobZones.map((jobZone) =>
-    <div className="card mb-3">
-      <h3 className="card-header">{jobZone.title}</h3>
-      <div className="card-body">
-        <h5 className="card-title">Special title treatment</h5>
-        <h6 className="card-subtitle text-muted">Support card subtitle</h6>
+  const jobZones = props.jobZones.map((jobZone, index) =>
+    <div className="card mb-3" id={index+1}>
+      <JobZoneHeader header={jobZone.title} length={jobZone.careers.length}/>
+
+      <div className="card text-white bg-info mb-3 ZoneInfo">
+        <div className="card-body">
+          <ul>
+            <h6>Experience:</h6>
+            <li><h6>{jobZone.experience}</h6></li>
+            <h6>Education:</h6>
+            <li><h6>{jobZone.education}</h6></li>
+            <h6>Training:</h6>
+            <li><h6>{jobZone.job_training}</h6></li>
+          </ul>
+        </div>
       </div>
 
-      <div className="card-body">
-        <p className="card-text">{jobZone.experience}</p>
-        <p className="card-text">{jobZone.education}</p>
-        <p className="card-text">{jobZone.job_training}</p>
-      </div>
       <div className="container">
         <div className="list-group">
           <CareerList careers={jobZone.careers}/>
         </div>
       </div>
+
       <div className="card-body">
-        <a href="#" className="card-link">Card link</a>
-        <a href="#" className="card-link">Another link</a>
-      </div>
-      <div className="card-footer text-muted">
-        2 days ago
+        <a href="#top" className="card-link">Back to the Top</a>
       </div>
     </div>
   );
