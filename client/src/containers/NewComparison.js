@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { fetchCareers } from '../actions/careers';
+import { addComparison } from '../actions/comparisons';
 import PredictorForm from '../components/PredictorForm';
 import '../styles/CompareStyle.css';
 
 class NewComparison extends Component {
 
-  constructor(props) {
+  constructor(props){
     super(props);
+
     this.state = {
-      engagement: [],
-      altruism: [],
-      skill: [],
-      support: [],
-      basicNeeds: [],
-      balance: [],
-      careers: []
     };
   }
 
@@ -25,19 +21,55 @@ class NewComparison extends Component {
     }
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+
+    const comparison = {predictors_attributes:[
+      {career_id: 0, engagement: 0, altruism: 0, skill: 0, support: 0, basic_needs: 0, balance: 0},
+      {career_id: 0, engagement: 0, altruism: 0, skill: 0, support: 0, basic_needs: 0, balance: 0},
+      {career_id: 0, engagement: 0, altruism: 0, skill: 0, support: 0, basic_needs: 0, balance: 0}
+    ]}
+
+    const predictors = document.getElementsByClassName("PredictorForm")
+    Array.prototype.forEach.call(predictors, function(predictorsElem, index) {
+      const predictorInputs = predictorsElem.getElementsByClassName("predictorInput")
+      Array.prototype.forEach.call(predictorInputs, function(inputElem) {
+        if(inputElem.attributes.value){
+          comparison["predictors_attributes"][index]["career_id"] = parseInt(inputElem.attributes.value.value) + 1
+        }else if (/[A-Z]/.test(inputElem.name)){
+          const name = inputElem.name
+          const capital = name.search(/[A-Z]/)
+          const lowercasedChar = name[capital].toLowerCase()
+          const rubyName = [name.slice(0, capital), "_", `${lowercasedChar}`, name.slice(capital+1)].join('');
+          comparison["predictors_attributes"][index][rubyName] = parseInt(inputElem.value);
+        }else{
+          comparison["predictors_attributes"][index][inputElem.name] = parseInt(inputElem.value);
+        }
+      });
+    });
+
+    this.props.addComparison(comparison);
+  }
+
   render(){
-    const options = this.props.careers.map((career, index) => { return {label: career.title, value: index}})
+    const options = this.props.careers.map((career, index) => {
+      return {label: career.title, value: index}
+    })
+
     return(
       <div className="container">
         <br/>
         <div className="card border-primary mb-3">
           <div className="card-body">
             <h4 className="card-title"><center>Compare Careers</center></h4>
-            <p className="card-text"><center>Rate some jobs on the predictors of job satisfaction from one to five.</center></p>
+            <p className="card-text"><center>
+              Rate some jobs on the predictors of job satisfaction from one to
+              five.
+            </center></p>
           </div>
         </div>
         <div className="container">
-          <form id="compareForm">
+          <form id="compareForm" onSubmit={(event) => this.handleSubmit(event)}>
             <div className="row justify-content-md-center">
               <table className="TableStyle table-hover">
                 <thead>
@@ -86,4 +118,14 @@ const mapStateToProps = (state) => {
   return {careers: state.careers.careers}
 }
 
-export default connect(mapStateToProps, {fetchCareers})(NewComparison);
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({
+    addComparison: addComparison,
+    fetchCareers: fetchCareers
+  }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewComparison)
+
+
+//export default connect(mapStateToProps, {fetchCareers})(NewComparison);

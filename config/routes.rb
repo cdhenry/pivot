@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   scope '/api' do
     get :careers, to: 'careers#index'
     get 'careers/:id', to: 'careers#search'

@@ -10,9 +10,9 @@ class ComparisonsController < ApplicationController
     render json: @comparison
   end
 
-  def new
-    @comparison = Comparison.new
-  end
+  # def new
+  #   @comparison = Comparison.new
+  # end
 
   def create
     @comparison = Comparison.new(comparison_params)
@@ -20,16 +20,16 @@ class ComparisonsController < ApplicationController
     render json: @comparison, status: 201
   end
 
-  def destroy
-    if @comparison.destroy
-      render json: { success_message: 'Successfully deleted!' }, status: 200
-    end
-  end
+  # def destroy
+  #   if @comparison.destroy
+  #     render json: { success_message: 'Successfully deleted!' }, status: 200
+  #   end
+  # end
 
-  def update
-    @comparison.update(comparison_params)
-    render json: @comparison
-  end
+  # def update
+  #   @comparison.update(comparison_params)
+  #   render json: @comparison
+  # end
 
   private
 
@@ -38,9 +38,9 @@ class ComparisonsController < ApplicationController
     end
 
     def comparison_params
-      params.require(:comparison).permit(predictors_attributes:[
+      params.require(:comparison).permit(predictors_attributes:[[
         :career_id, :engagement, :altruism, :skill, :support, :basic_needs,
-        :balance
+        :balance]
       ])
     end
 
