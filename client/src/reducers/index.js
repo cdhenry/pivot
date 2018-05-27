@@ -4,7 +4,6 @@ import careersReducer from './careersReducer'
 import jobZonesReducer from './jobZonesReducer'
 import comparisonsReducer from './comparisonsReducer'
 
-
 const rootReducer = combineReducers({
   career: careerReducer,
   careers: careersReducer,

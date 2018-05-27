@@ -3,7 +3,7 @@ export default function careerReducer(state= {loading: false, career: []}, actio
     case 'LOADING_CAREER':
       return Object.assign({}, state,{loading: true})
     case 'FETCH_CAREER':
-      return {loading: false, career: action.career}
+      return {loading: false, career: action.payload}
     default:
       return state;
   }

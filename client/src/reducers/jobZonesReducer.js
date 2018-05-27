@@ -3,7 +3,7 @@ export default function jobZonesReducer(state= {loading: false, jobZones: []}, a
     case 'LOADING_JOB_ZONES':
       return Object.assign({}, state,{loading: true})
     case 'FETCH_JOB_ZONES':
-      return {loading: false, jobZones: action.jobZones}
+      return {loading: false, jobZones: action.payload}
     default:
       return state;
   }
