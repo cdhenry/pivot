@@ -4,7 +4,7 @@ import { fetchComparisons } from '../actions/comparisons';
 import ComparisonList from '../components/ComparisonList';
 //import ComparisonButtons from '../components/ComparisonButtons';
 
-class ComparisonsPage extends Component {
+class IndexComparison extends Component {
 
   componentDidMount(){
     if(this.props.comparisons.length === 0) {
@@ -21,7 +21,7 @@ class ComparisonsPage extends Component {
         <div className="jumbotron" id="top">
           <h1 className="display-3">Comparisons</h1>
         </div>
-    
+
         <br />
         <ComparisonList comparisons={comparisons}/>
       </div>
@@ -33,4 +33,4 @@ const mapStateToProps = (state) => {
   return {comparisons: state.comparisons.comparisons}
 }
 
-export default connect(mapStateToProps, {fetchComparisons})(ComparisonsPage);
+export default connect(mapStateToProps, {fetchComparisons})(IndexComparison);

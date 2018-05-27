@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchCareers } from '../actions/careers';
 import PredictorForm from '../components/PredictorForm';
 import '../styles/CompareStyle.css';
 
-class ComparePage extends React.Component {
+class NewComparison extends Component {
 
   constructor(props) {
     super(props);
@@ -86,4 +86,4 @@ const mapStateToProps = (state) => {
   return {careers: state.careers.careers}
 }
 
-export default connect(mapStateToProps, {fetchCareers})(ComparePage);
+export default connect(mapStateToProps, {fetchCareers})(NewComparison);
