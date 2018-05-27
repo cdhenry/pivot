@@ -126,6 +126,3 @@ function mapDispatchToProps(dispatch){
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewComparison)
-
-
-//export default connect(mapStateToProps, {fetchCareers})(NewComparison);
