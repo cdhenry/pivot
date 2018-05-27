@@ -7,7 +7,7 @@ export function fetchCareer(id) {
     .then(response => {
       return response.json()
     }).then(responseJSON => {
-      return dispatch({type: 'FETCH_CAREER', career: responseJSON})
+      return dispatch({type: 'FETCH_CAREER', payload: responseJSON})
     })
   }
 }

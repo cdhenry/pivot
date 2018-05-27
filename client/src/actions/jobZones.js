@@ -7,7 +7,7 @@ export function fetchJobZones() {
     .then(response => {
       return response.json()
     }).then(responseJSON => {
-      return dispatch({type: 'FETCH_JOB_ZONES', jobZones: responseJSON})
+      return dispatch({type: 'FETCH_JOB_ZONES', payload: responseJSON})
     })
   }
 }
