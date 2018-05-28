@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchComparisons } from '../actions/comparisons';
 import ComparisonList from '../components/ComparisonList';
-//import ComparisonButtons from '../components/ComparisonButtons';
 
 class IndexComparison extends Component {
 

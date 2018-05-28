@@ -10,9 +10,9 @@ class PredictorForm extends React.Component {
       altruism: 5,
       skill: 5,
       support: 5,
-      basicNeeds: 5,
+      basic_needs: 5,
       balance: 5,
-      careerId: 0
+      career_id: 0
     };
     this.baseState = this.state
   }
@@ -25,7 +25,7 @@ class PredictorForm extends React.Component {
 
   handleCareerChange = event => {
     this.setState({
-      careerId: event + 1
+      career_id: event + 1
     })
   }
 
@@ -78,7 +78,7 @@ class PredictorForm extends React.Component {
             <tr className="table-primary">
               <td>
                 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                <input className="predictorInput" type="range" min="1" max="5" name="basicNeeds" onChange={this.handleChange}/>
+                <input className="predictorInput" type="range" min="1" max="5" name="basic_needs" onChange={this.handleChange}/>
               </td>
             </tr>
             <tr className="table-light">

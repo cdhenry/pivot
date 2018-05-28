@@ -38,12 +38,6 @@ class NewComparison extends Component {
       Array.prototype.forEach.call(predictorInputs, function(inputElem) {
         if(inputElem.attributes.value){
           comparison["predictors_attributes"][index]["career_id"] = parseInt(inputElem.attributes.value.value) + 1
-        }else if (/[A-Z]/.test(inputElem.name)){
-          const name = inputElem.name
-          const capital = name.search(/[A-Z]/)
-          const lowercasedChar = name[capital].toLowerCase()
-          const rubyName = [name.slice(0, capital), "_", `${lowercasedChar}`, name.slice(capital+1)].join('');
-          comparison["predictors_attributes"][index][rubyName] = parseInt(inputElem.value);
         }else{
           comparison["predictors_attributes"][index][inputElem.name] = parseInt(inputElem.value);
         }
@@ -135,3 +129,11 @@ function mapDispatchToProps(dispatch){
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewComparison)
+
+// }else if (/[A-Z]/.test(inputElem.name)){
+//   debugger;
+//   const name = inputElem.name
+//   const capital = name.search(/[A-Z]/)
+//   const lowercasedChar = name[capital].toLowerCase()
+//   const rubyName = [name.slice(0, capital), "_", `${lowercasedChar}`, name.slice(capital+1)].join('');
+//   comparison["predictors_attributes"][index][rubyName] = parseInt(inputElem.value);
