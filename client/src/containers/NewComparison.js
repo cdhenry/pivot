@@ -49,6 +49,7 @@ class NewComparison extends Component {
     });
 
     this.props.addComparison(comparison);
+    alert("This Comparison Has Been Saved!")
   }
 
   render(){

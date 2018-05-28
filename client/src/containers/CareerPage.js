@@ -15,8 +15,8 @@ class CareerPage extends Component {
     const { career } = this.props;
 
     return (
-      <div className="container" align="center">
-        {career.title}, {career.aka}, {career.on_the_job}, {career.what_they_do}
+      <div>
+        <CareerShow career={career}/>
       </div>
     );
   }
