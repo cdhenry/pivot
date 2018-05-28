@@ -2,7 +2,6 @@ import React from 'react';
 import '../styles/CompareStyle.css';
 
 const ComparisonList = ({comparisons}) => {
-  debugger;
   const renderComparisons = comparisons.map((comparison, index) =>
     <div>
       <div className="card-header">Comparison {comparison.id}</div>

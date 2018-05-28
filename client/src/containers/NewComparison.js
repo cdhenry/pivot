@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Redirect } from 'react-router'
 import { fetchCareers } from '../actions/careers';
 import { addComparison } from '../actions/comparisons';
 import PredictorForm from '../components/PredictorForm';
@@ -12,6 +13,7 @@ class NewComparison extends Component {
     super(props);
 
     this.state = {
+      fireRedirect: false
     };
   }
 
@@ -50,12 +52,15 @@ class NewComparison extends Component {
 
     this.props.addComparison(comparison);
     alert("This Comparison Has Been Saved!")
+    this.setState({ fireRedirect: true })
   }
 
   render(){
     const options = this.props.careers.map((career, index) => {
       return {label: career.title, value: index}
     })
+    const { from } = this.props.location.state || '/'
+    const { fireRedirect } = this.state
 
     return(
       <div className="container">
@@ -109,6 +114,9 @@ class NewComparison extends Component {
             </div>
           </form>
         </div>
+        {fireRedirect && (
+          <Redirect to={from || '/comparisons/success'}/>
+        )}
         <br/>
       </div>
     )

@@ -5,6 +5,7 @@ import CareerPage from './CareerPage';
 import IndexComparison from './IndexComparison';
 import NewComparison from './NewComparison';
 import EditComparison from './EditComparison';
+import SuccessComparison from '../components/SuccessComparison'
 import NavBar from '../components/NavBar';
 import Home from '../components/Home';
 
@@ -23,6 +24,7 @@ class App extends Component {
           <Switch>
             <Route path="/comparisons/:comparisonId/edit" component={EditComparison}/>
             <Route path="/comparisons/new" component={NewComparison}/>
+            <Route path="/comparisons/success" component={SuccessComparison}/>
             <Route path="/comparisons" component={IndexComparison}/>
           </Switch>
         </div>

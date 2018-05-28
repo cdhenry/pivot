@@ -14,6 +14,7 @@ class PredictorForm extends React.Component {
       balance: 5,
       careerId: 0
     };
+    this.baseState = this.state
   }
 
   handleChange = event => {
@@ -43,7 +44,6 @@ class PredictorForm extends React.Component {
                     onChange={this.handleCareerChange}
                     classes={{
                       selectValue: 'predictorInput',
-                      selectArrow: 'my-custom-arrow'
                     }}
                   />
                 </div>
