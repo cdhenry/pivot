@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchCareer } from '../actions/career';
+import { fetchCareer } from '../actions/careers';
 import CareerShow from '../components/CareerShow';
 
 class CareerPage extends Component {
@@ -23,7 +23,7 @@ class CareerPage extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return {career: state.career.career}
+  return {career: state.careers.career}
 }
 
 export default connect(mapStateToProps, {fetchCareer})(CareerPage);

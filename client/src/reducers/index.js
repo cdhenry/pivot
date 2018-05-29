@@ -1,11 +1,11 @@
 import {combineReducers} from 'redux';
-import careerReducer from './careerReducer'
+//import careerReducer from './careerReducer'
 import careersReducer from './careersReducer'
 import jobZonesReducer from './jobZonesReducer'
 import comparisonsReducer from './comparisonsReducer'
 
 const rootReducer = combineReducers({
-  career: careerReducer,
+  //career: careerReducer,
   careers: careersReducer,
   jobZones: jobZonesReducer,
   comparisons: comparisonsReducer

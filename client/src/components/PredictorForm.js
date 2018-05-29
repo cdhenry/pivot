@@ -53,38 +53,91 @@ class PredictorForm extends React.Component {
           <tbody>
             <tr className="table-primary">
               <td>
-                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                <input className="predictorInput" type="range" min="1" max="5" name="engagement" onInput={this.handleChange}/>
+                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5
+                <br/>
+                <input
+                  className="predictorInput"
+                  type="range"
+                  min="1"
+                  max="5"
+                  name="engagement"
+                  onInput={this.handleChange}
+                />
               </td>
             </tr>
             <tr className="table-light">
               <td>
-                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                <input className="predictorInput" type="range" min="1" max="5" name="altruism" onChange={this.handleChange}/>
+                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5
+                <br/>
+                <input
+                  className="predictorInput"
+                  type="range"
+                  min="1"
+                  max="5"
+                  name="altruism"
+                  onChange={this.handleChange}
+                />
               </td>
             </tr>
             <tr className="table-primary">
               <td>
-                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                <input className="predictorInput" type="range" min="1" max="5" name="skill" onChange={this.handleChange}/>
+                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5
+                <br/>
+                <input
+                  className="predictorInput"
+                  type="range"
+                  min="1"
+                  max="5"
+                  name="skill"
+                  onChange={this.handleChange}
+                />
               </td>
             </tr>
             <tr className="table-light">
               <td>
-                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                <input className="predictorInput" type="range" min="1" max="5" name="support" onChange={this.handleChange}/>
+                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5
+                <br/>
+                <input
+                  className="predictorInput"
+                  type="range"
+                  min="1"
+                  max="5"
+                  name="support"
+                  onChange={this.handleChange}
+                />
               </td>
             </tr>
             <tr className="table-primary">
               <td>
-                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                <input className="predictorInput" type="range" min="1" max="5" name="basic_needs" onChange={this.handleChange}/>
+                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5
+                <br/>
+                <input
+                  className="predictorInput"
+                  type="range"
+                  min="1"
+                  max="5"
+                  name="basic_needs"
+                  onChange={this.handleChange}
+                />
               </td>
             </tr>
             <tr className="table-light">
               <td>
-                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br/>
-                <input className="predictorInput" type="range" min="1" max="5" name="balance" onChange={this.handleChange}/>
+                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5
+                <br/>
+                <input
+                  className="predictorInput"
+                  type="range"
+                  min="1"
+                  max="5"
+                  name="balance"
+                  onChange={this.handleChange}/>
               </td>
             </tr>
           </tbody>

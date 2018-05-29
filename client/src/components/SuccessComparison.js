@@ -8,7 +8,9 @@ const SuccessComparison = () => {
       <hr className="my-4"/>
       <p>Take a look at it over in: </p>
       <p className="lead">
-        <a className="btn btn-primary btn-lg" href="/comparisons" role="button">Past Comparisons</a>
+        <a className="btn btn-primary btn-lg" href="/comparisons" role="button">
+          Past Comparisons
+        </a>
       </p></center>
     </div>
   )

@@ -104,7 +104,11 @@ class NewComparison extends Component {
               <PredictorForm options={options}/>
             </div>
             <div align="center">
-              <input type="submit" className="btn btn-outline-primary" value="Save This Comparison"/>
+              <input
+                type="submit"
+                className="btn btn-outline-primary"
+                value="Save This Comparison"
+              />
             </div>
           </form>
         </div>

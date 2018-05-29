@@ -15,7 +15,7 @@ class Career < ActiveRecord::Base
     tasks = ""
     body_hash["also_called"]["title"].each{|title| aka = aka + ", " + title}
     body_hash["on_the_job"]["task"].each{|task| tasks = tasks + " " + task}
-    result = body_hash.except("resources", "tags", "code", "also_called", "on_the_job")
+    result = body_hash.except("resources", "tags", "code", "also_called", "on_the_job", "career_video")
     result["aka"] = aka.slice(2..-1)
     result["on_the_job"] = tasks.slice(1..-1)
     result
